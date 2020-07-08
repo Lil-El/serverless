@@ -13,3 +13,4 @@ inputs:
       - http
       - https
     environment: release
+  # 可以配置ignore：具体查看tencent-egg的更多配置

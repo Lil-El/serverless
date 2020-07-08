@@ -13,6 +13,7 @@
 - [静态网站部署](#静态网站部署)
 - [Express 项目部署](#express-项目部署)
   - [层](#层)
+- [Vue+Express 项目部署](#vueexpress-项目部署)
 
 ---
 
@@ -78,6 +79,8 @@
 2. 配置 `sls.js`
 3. `serverless --debug`部署
 
+> 会生成对应的`云函数`
+
 ### 层
 
 由于项目依赖很大，所以使用`层`进行管理 [官方配置][6]
@@ -86,7 +89,7 @@
 - 部署代码
 - 在`云函数-函数服务-函数管理-层管理`绑定层
 
-> 会生成对应的`云函数`
+## Vue+Express 项目部署
 
 [1]: https://cloud.tencent.com/document/product/1154/39271#2.-.E5.88.9B.E5.BB.BA
 [2]: https://console.cloud.tencent.com/scf/list?rid=1&ns=default

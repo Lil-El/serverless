@@ -1,0 +1,19 @@
+name: tencent-fullstack-vue-application
+
+dashboard:
+  component: "@serverless/tencent-website"
+  inputs:
+    code:
+      src: dist
+      root: front
+      hook: npm run build #每次部署都先执行该命令
+    env: # 环境变量
+      apiUrl: ${api.url} # api部署完成后将url传给apiUrl
+api:
+  component: "@serverless/tencent-express"
+  inputs:
+    code: ./api
+    functionName: tencent-fullstack-vue-api
+    apigatewayConf:
+      protocols:
+        - https
