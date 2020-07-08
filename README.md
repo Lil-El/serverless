@@ -3,7 +3,7 @@
 **Referenece Address**: [@云函数 SCF 组件][1]
 
 ---
-- [- Express项目部署](#ulliexpress项目部署liul)
+
 - [Function Service:自动创建云函数](#function-service自动创建云函数)
 - [Function Service:手动创建云函数](#function-service手动创建云函数)
   - [Serverless Framework](#serverless-framework)
@@ -11,7 +11,9 @@
   - [API 网关组件](#api-网关组件)
     - [创建](#创建)
 - [静态网站部署](#静态网站部署)
-- [Express项目部署](#express项目部署)
+- [Express 项目部署](#express-项目部署)
+  - [层](#层)
+
 ---
 
 ## Function Service:自动创建云函数
@@ -61,14 +63,34 @@
 > 在新建云函数时，可以新建 API 服务也可以使用已有的 API 服务
 
 ## 静态网站部署
->[应用][3]：查看所有的应用
-  1. 配置 yaml 文件
-  2. `sls --debug`部署
 
-## Express项目部署
+> [应用][3]：查看所有的应用
+> [官方配置][5]
 
+1. 配置 yaml 文件
+2. `sls --debug`部署
 
+## Express 项目部署
+
+[官方配置][4]
+
+1. 配置 yaml 文件
+2. 配置 `sls.js`
+3. `serverless --debug`部署
+
+### 层
+
+由于项目依赖很大，所以使用`层`进行管理 [官方配置][6]
+
+- 新建层：上传 node_modules.zip 包
+- 部署代码
+- 在`云函数-函数服务-函数管理-层管理`绑定层
+
+> 会生成对应的`云函数`
 
 [1]: https://cloud.tencent.com/document/product/1154/39271#2.-.E5.88.9B.E5.BB.BA
 [2]: https://console.cloud.tencent.com/scf/list?rid=1&ns=default
 [3]: https://serverless.cloud.tencent.com/
+[4]: https://github.com/serverless-components/tencent-express/blob/v2/docs/configure.md
+[5]: https://github.com/serverless-components/website
+[6]: https://github.com/serverless-components/tencent-layer

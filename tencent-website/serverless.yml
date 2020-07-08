@@ -5,9 +5,8 @@ app: yxdWebsite # (可选) 该 website 应用名称
 stage: dev # (可选) 用于区分环境信息，默认值是 dev
 
 inputs:
-  code:
-    src: ./src
-    index: index.html
-    error: error.html
+  src: ./src
+  indexDocument: index.html
+  errorDocument: error.html
   region: ap-beijing
   bucketName: my-bucket
