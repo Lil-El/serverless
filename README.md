@@ -13,7 +13,7 @@
 - 进入[@腾讯云][2]，新建`函数服务` 
 - 基本信息配置
   <img src="doc/9$KN63OV]GJQ9`67NFNM5GH.png" width = "60%" height = "60%" align=center />
-
+ ![触发器配置](doc/2.png)
 - 函数配置
 - 触发配置
   ![触发器配置](https://github.com/Lil-El/Serverless/blob/master/doc/2.png)
