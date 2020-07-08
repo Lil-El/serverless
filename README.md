@@ -1,6 +1,4 @@
-# Serverless 实践
-
-@(Edit:Marxico)[Serverless|SCF]
+# <div align="center">Serverless 实践
 
 **Referenece Address**: [@云函数 SCF 组件][1]
 
