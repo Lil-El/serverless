@@ -1,0 +1,25 @@
+component: scf # (必填) 引用 component 的名称，当前用到的是 tencent-scf 组件
+name: yxd-scf # (必填) 该组件创建的实例名称
+org: yxd # (可选) 用于记录组织信息，默认值为您的腾讯云账户 appid
+app: yxdApp # (可选) 该 SCF 应用名称
+stage: dev # (可选) 用于区分环境信息，默认值是 dev
+
+inputs:
+  name: scfFunctionName # 函数名字
+  src: ./src # 源代码路径
+  runtime: Nodejs12.16
+  region: ap-beijing
+  handler: index.main_handler # handler指index文件的main_handler
+  events: # 事件触发
+    - apigw: #API网关
+        name: serverless_api # 网关名字：和API网关服务名对应
+        parameters:
+          protocols:
+            - http
+            - https
+          serviceName:
+          description: is description
+          environment: release #环境：发布，测试，预发布
+          endpoints: # 当以get访问/index，执行handler的函数
+            - path: /index
+              method: GET

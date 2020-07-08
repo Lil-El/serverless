@@ -1,0 +1,12 @@
+restApi:
+  component: "@serverless/tencent-apigateway"
+  inputs:
+    region: ap-beijing
+    protocol: http
+    serviceName: yxdservelessapi
+    environment: release
+    endpoints: #访问/users，会执行scfFunctionName函数（已有的云函数）
+      - path: /users
+        method: GET
+        function:
+          functionName: scfFunctionName
