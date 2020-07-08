@@ -8,14 +8,12 @@
 
 ## Function Service:自动创建云函数
 
-> 创建云函数
-
 - 进入[@腾讯云][2]，新建`函数服务` - 基本信息配置
-  <img src="./doc/9$KN63OV]GJQ9`67NFNM5GH.png" width = "60%" height = "60%" align=center />
+  <img src="./doc/1.jpg" width = "60%" height = "60%" align=center />
 
 - 函数配置
 - 触发配置
-  ![触发器配置](./doc/2.png)
+  ![触发器配置](./doc/2.jpg)
 - 查看云函数
 
 ## Function Service:手动创建云函数
